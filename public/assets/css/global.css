@@ -60,21 +60,21 @@
 
 :root {
 	
-	/* #E1FE6E in decimal RGB */
-	--main-color: rgb(225,254,110);
-	--main-color-rgb:225,254,110;
+	/* #026AB4 in decimal RGB */
+	--main-color: rgb(2,106,180);
+	--main-color-rgb:2,106,180;
 	
-	/* #3A421B in decimal RGB */
-	--color-two: rgb(58,66,27);
-	--color-two-rgb:58,66,27;
+	/* #0B1F3A in decimal RGB */
+	--color-two: rgb(11,31,58);
+	--color-two-rgb:11,31,58;
 	
-	/* #173401 in decimal RGB */
-	--color-three: rgb(23,52,1);
-	--color-three-rgb:23,52,1;
+	/* #07315C in decimal RGB */
+	--color-three: rgb(7,49,92);
+	--color-three-rgb:7,49,92;
 	
-	/* #4A6436 in decimal RGB */
-	--color-four: rgb(74,100,54);
-	--color-four-rgb:74,100,54;
+	/* #0F4C8C in decimal RGB */
+	--color-four: rgb(15,76,140);
+	--color-four-rgb:15,76,140;
 	
 	/* #010212 in decimal RGB */
 	--color-five: rgb(1,2,18);
