@@ -23,7 +23,6 @@ export const headerMarkup = `
                   <li><a href="/">Home</a></li>
                   <li><a href="/about">About</a></li>
                   <li><a href="/services">Products & Services</a></li>
-                  <li><a href="/mandates">Mandates</a></li>
                   <li><a href="/partnerships">Partnerships</a></li>
                   <li><a href="/contact">Contact</a></li>
                 </ul>
@@ -32,7 +31,6 @@ export const headerMarkup = `
           </div>
 
           <div class="outer-box d-flex align-items-center flex-wrap">
-            <div class="login-box"><a href="/contact"><span class="icon flaticon-user-1"></span>Client Portal</a></div>
 
             <div class="header_button-box">
               <a href="/contact" class="theme-btn btn-style-one">
