@@ -257,7 +257,7 @@ export default function Home() {
       </div>
 
       <div class="row clearfix">
-        <div class="service-block_three col-lg-4 col-md-6 col-sm-12">
+        <div class="service-block_three col-lg-6 col-md-6 col-sm-12">
           <div class="service-block_three-inner">
             <div class="service-block_three-upper-box d-flex align-items-center flex-wrap">
               <div class="service-block_three-icon">
@@ -268,7 +268,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div class="service-block_three col-lg-4 col-md-6 col-sm-12">
+        <div class="service-block_three col-lg-6 col-md-6 col-sm-12">
           <div class="service-block_three-inner">
             <div class="service-block_three-upper-box d-flex align-items-center flex-wrap">
               <div class="service-block_three-icon">
@@ -279,7 +279,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div class="service-block_three col-lg-4 col-md-6 col-sm-12">
+        <div class="service-block_three col-lg-6 col-md-6 col-sm-12">
           <div class="service-block_three-inner">
             <div class="service-block_three-upper-box d-flex align-items-center flex-wrap">
               <div class="service-block_three-icon">
@@ -290,7 +290,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div class="service-block_three col-lg-4 col-md-6 col-sm-12">
+        <div class="service-block_three col-lg-6 col-md-6 col-sm-12">
           <div class="service-block_three-inner">
             <div class="service-block_three-upper-box d-flex align-items-center flex-wrap">
               <div class="service-block_three-icon">
@@ -301,7 +301,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div class="service-block_three col-lg-4 col-md-6 col-sm-12">
+        <div class="service-block_three col-lg-6 col-md-6 col-sm-12">
           <div class="service-block_three-inner">
             <div class="service-block_three-upper-box d-flex align-items-center flex-wrap">
               <div class="service-block_three-icon">
@@ -312,7 +312,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div class="service-block_three col-lg-4 col-md-6 col-sm-12">
+        <div class="service-block_three col-lg-6 col-md-6 col-sm-12">
           <div class="service-block_three-inner">
             <div class="service-block_three-upper-box d-flex align-items-center flex-wrap">
               <div class="service-block_three-icon">
@@ -323,16 +323,6 @@ export default function Home() {
           </div>
         </div>
 
-        <div class="service-block_three col-lg-4 col-md-6 col-sm-12">
-          <div class="service-block_three-inner">
-            <div class="service-block_three-upper-box d-flex align-items-center flex-wrap">
-              <div class="service-block_three-icon">
-                <img src="assets/images/icons/service-8.svg" alt="Financial Modelling & Valuation" />
-              </div>
-              <h4 class="service-block_three-heading"><a href="/services">Financial Modelling &amp; Valuation</a></h4>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
