@@ -77,6 +77,44 @@ export default function Home() {
     };
   }, [mounted]);
 
+  useEffect(() => {
+    if (!mounted) {
+      return;
+    }
+
+    const menuOuter = document.querySelector(
+      ".mobile-menu .menu-box .menu-outer"
+    );
+    const mainMenu = document.querySelector(
+      ".main-header .nav-outer .main-menu"
+    );
+
+    if (menuOuter && mainMenu && menuOuter.childElementCount === 0) {
+      menuOuter.innerHTML = mainMenu.innerHTML;
+    }
+
+    const openMenu = () => {
+      document.body.classList.add("mobile-menu-visible");
+    };
+    const closeMenu = () => {
+      document.body.classList.remove("mobile-menu-visible");
+    };
+
+    const toggler = document.querySelector(".mobile-nav-toggler");
+    const backdrop = document.querySelector(".mobile-menu .menu-backdrop");
+    const closeBtn = document.querySelector(".mobile-menu .close-btn");
+
+    toggler?.addEventListener("click", openMenu);
+    backdrop?.addEventListener("click", closeMenu);
+    closeBtn?.addEventListener("click", closeMenu);
+
+    return () => {
+      toggler?.removeEventListener("click", openMenu);
+      backdrop?.removeEventListener("click", closeMenu);
+      closeBtn?.removeEventListener("click", closeMenu);
+    };
+  }, [mounted]);
+
   const content = `
   <section id="home" class="slider-two" style="background-image:url(assets/images/main-slider/1.png)">
     <div class="slider-two_icon" style="background-image:url(assets/images/main-slider/icon-1.png)"></div>
