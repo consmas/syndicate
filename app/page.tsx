@@ -10,6 +10,73 @@ export default function Home() {
     setMounted(true);
   }, []);
 
+  useEffect(() => {
+    if (!mounted) {
+      return;
+    }
+
+    let stopped = false;
+    const initSlider = () => {
+      if (stopped || typeof window === "undefined") {
+        return false;
+      }
+      const Swiper = (window as { Swiper?: new (...args: any[]) => unknown })
+        .Swiper;
+      const sliderEl = document.querySelector(".main-slider");
+      if (!Swiper || !sliderEl) {
+        return false;
+      }
+      if ((sliderEl as { swiper?: unknown }).swiper) {
+        return true;
+      }
+
+      new Swiper(".main-slider", {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loop: false,
+        autoplay: {
+          enabled: true,
+          delay: 6000,
+        },
+        navigation: {
+          nextEl: ".main-slider-next",
+          prevEl: ".main-slider-prev",
+          clickable: true,
+        },
+        pagination: {
+          el: ".main-slider_pagination",
+          clickable: true,
+        },
+        speed: 500,
+        breakpoints: {
+          1600: { slidesPerView: 1 },
+          1200: { slidesPerView: 1 },
+          992: { slidesPerView: 1 },
+          768: { slidesPerView: 1 },
+          576: { slidesPerView: 1 },
+          0: { slidesPerView: 1 },
+        },
+      });
+
+      return true;
+    };
+
+    if (initSlider()) {
+      return;
+    }
+
+    const retryId = window.setInterval(() => {
+      if (initSlider()) {
+        window.clearInterval(retryId);
+      }
+    }, 300);
+
+    return () => {
+      stopped = true;
+      window.clearInterval(retryId);
+    };
+  }, [mounted]);
+
   const content = `
   <section id="home" class="slider-two" style="background-image:url(assets/images/main-slider/1.png)">
     <div class="slider-two_icon" style="background-image:url(assets/images/main-slider/icon-1.png)"></div>
@@ -25,7 +92,7 @@ export default function Home() {
               <div class="slider-two_image-column col-lg-5 col-md-12 col-sm-12">
                 <div class="slider-two_image-outer">
                   <div class="slider-two_image">
-                    <img src="assets/images/main-slider/image-2.png" alt="Capital strategy" />
+                    <img src="assets/images/main-slider/image-1.png" alt="Capital strategy" />
                   </div>
                 </div>
               </div>
@@ -105,7 +172,7 @@ export default function Home() {
               <div class="slider-two_image-column col-lg-5 col-md-12 col-sm-12">
                 <div class="slider-two_image-outer">
                   <div class="slider-two_image">
-                    <img src="assets/images/main-slider/image-2.png" alt="Institutional partnerships" />
+                    <img src="assets/images/main-slider/image-3.png" alt="Institutional partnerships" />
                   </div>
                 </div>
               </div>

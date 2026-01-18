@@ -1980,8 +1980,12 @@
 
 .slider-two_image img{
 	position: relative;
-	max-width:inherit;
+	width: 706px;
+	height: 848px;
+	max-width: 100%;
+	max-height: 848px;
 	display: block;
+	object-fit: cover;
 }
 
 .slider-two .swiper-slide-active .slider-two_image{
