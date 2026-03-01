@@ -177,7 +177,9 @@ function Btn({ children, onClick, variant = "primary", style: s = {}, type = "bu
         fontWeight: 600,
         letterSpacing: 0.5,
         padding: "14px 32px",
-        border: "none",
+        borderStyle: "solid",
+        borderWidth: isPrimary ? 0 : 1.5,
+        borderColor: isPrimary ? "transparent" : h ? C.blue : C.border,
         cursor: "pointer",
         display: "inline-flex",
         alignItems: "center",
@@ -193,7 +195,6 @@ function Btn({ children, onClick, variant = "primary", style: s = {}, type = "bu
           : {
               background: "transparent",
               color: h ? C.blue : C.navy,
-              border: `1.5px solid ${h ? C.blue : C.border}`,
             }),
         ...s,
       }}

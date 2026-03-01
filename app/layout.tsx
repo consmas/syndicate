@@ -6,7 +6,9 @@ export const metadata: Metadata = {
   description:
     "Specialist financial advisory focused on alternative investments and structured finance across Africa.",
   icons: {
-    icon: "/assets/images/favicon.png",
+    icon: "/assets/images/logo.png",
+    shortcut: "/assets/images/logo.png",
+    apple: "/assets/images/logo.png",
   },
 };
 
