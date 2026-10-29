@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import { IMG } from "../_site/data";
+import { pageMeta } from "../_site/meta";
 import { CtaBand, Model, NextPage, PageHero, Pipeline } from "../_site/sections";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Our Approach",
-  description: "Origination, structuring, deal preparation, investor matching and execution through to financial close.",
-};
+  description:
+    "Origination, structuring, deal preparation, investor matching and execution through to financial close.",
+  path: "/approach",
+});
 
 export default function ApproachPage() {
   return (

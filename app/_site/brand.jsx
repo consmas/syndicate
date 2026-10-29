@@ -25,7 +25,7 @@ export function LogoFull({ light = false, compact = false }) {
       <div>
         <div
           style={{
-            fontFamily: "'DM Sans', -apple-system, sans-serif",
+            fontFamily: "var(--font-logo), -apple-system, sans-serif",
             fontSize: compact ? 15 : 17,
             fontWeight: 700,
             color: textColor,
@@ -38,7 +38,7 @@ export function LogoFull({ light = false, compact = false }) {
         </div>
         <div
           style={{
-            fontFamily: "'DM Sans', -apple-system, sans-serif",
+            fontFamily: "var(--font-logo), -apple-system, sans-serif",
             fontSize: compact ? 8 : 9.5,
             fontWeight: 500,
             color: C.blue,

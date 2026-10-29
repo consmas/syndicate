@@ -1,3 +1,5 @@
+export const SITE_URL = "https://syndicateadvisory.com";
+
 export const IMG = {
   handshake: "/assets/images/site/handshake.jpg",
   screens: "/assets/images/site/screens.jpg",

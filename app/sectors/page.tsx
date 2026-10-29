@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import { IMG } from "../_site/data";
+import { pageMeta } from "../_site/meta";
 import { CtaBand, NextPage, PageHero, SectorsGrid } from "../_site/sections";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Sector Expertise",
-  description: "Infrastructure, energy, water, logistics, real estate, industrials and growth businesses across Africa.",
-};
+  description:
+    "Infrastructure, energy, water, logistics, real estate, industrials and growth businesses across Africa.",
+  path: "/sectors",
+});
 
 export default function SectorsPage() {
   return (

@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import { IMG } from "../_site/data";
+import { pageMeta } from "../_site/meta";
 import { CtaBand, Narrative, NextPage, PageHero } from "../_site/sections";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Who We Are",
-  description: "We build deals, not just execute them: investment advisory for Africa's businesses, projects and industries.",
-};
+  description:
+    "We build deals, not just execute them: investment advisory for Africa's businesses, projects and industries.",
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (

@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import { IMG } from "../_site/data";
+import { pageMeta } from "../_site/meta";
 import { ContactDetails, PageHero } from "../_site/sections";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Contact",
-  description: "Contact Syndicate Investment Advisory, Independence Avenue, Accra, Ghana.",
-};
+  description:
+    "Contact Syndicate Investment Advisory, Independence Avenue, Accra, Ghana.",
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (

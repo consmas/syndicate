@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { LogoFull } from "./brand";
-import { CountUp } from "./client";
+import { CountUp, EnquiryForm } from "./client";
 import { AUDIENCES, EMAIL, FLOW, IMG, MAP_SRC, NAV, PHONE, PLATFORMS, SECTORS, VALUES } from "./data";
 import { Media, MoreLink, Words, d } from "./ui";
 
@@ -161,7 +161,7 @@ export function Pipeline({ more = false }) {
             {FLOW.map((step, i) => (
               <div className="flow-node" key={step.title} style={d(i, 0.18)}>
                 <div className="flow-dot">{pad(i)}</div>
-                <h4>{step.title}</h4>
+                <h3>{step.title}</h3>
                 <p>{step.text}</p>
               </div>
             ))}
@@ -356,11 +356,12 @@ export function SectorsGrid({ intro = true }) {
             </p>
           </div>
         )}
+        {!intro && <h2 className="sr-only">Sectors we work in</h2>}
         <div className="sector-grid">
           {SECTORS.map((s, i) => (
             <div className="sector-cell" key={s.title} data-reveal style={d(i % 3, 0.1)}>
               <span className="sector-n">{pad(i)}</span>
-              <h4>{s.title}</h4>
+              <h3>{s.title}</h3>
               <p>{s.text}</p>
             </div>
           ))}
@@ -416,17 +417,17 @@ export function Model() {
         <div className="model-diagram" data-reveal>
           <div className="model-row">
             <div className="model-box">
-              <h5>Real Economy</h5>
+              <h3>Real Economy</h3>
               <span>Corporates • Governments • Entrepreneurs • Developers</span>
             </div>
             <div className="model-arrow">→</div>
             <div className="model-box accent">
-              <h5>Syndicate Investment Advisory</h5>
+              <h3>Syndicate Investment Advisory</h3>
               <span>Sourcing • Structuring • Execution</span>
             </div>
             <div className="model-arrow">→</div>
             <div className="model-box">
-              <h5>Institutional Capital</h5>
+              <h3>Institutional Capital</h3>
               <span>Long-term investment in businesses, projects &amp; assets</span>
             </div>
           </div>
@@ -486,9 +487,14 @@ export function ContactDetails() {
     <section>
       <div className="wrap">
         <div className="contact-grid">
-          <div>
+          <div className="form-card" data-reveal>
+            <span className="eyebrow">Send an enquiry</span>
+            <h2>Tell us what you&apos;re working on.</h2>
+            <EnquiryForm />
+          </div>
+          <div className="contact-side">
             <div className="contact-block" data-reveal style={d(0)}>
-              <h3>Address</h3>
+              <h3>Office</h3>
               <p>9th Floor, Business Emporium</p>
               <p>Movenpick Ambassador Hotel</p>
               <p>Independence Avenue</p>
@@ -510,14 +516,14 @@ export function ContactDetails() {
                 </a>
               </p>
             </div>
-          </div>
-          <div className="contact-map" data-reveal="mask">
-            <iframe
-              title="Map: Movenpick Ambassador Hotel, Independence Avenue, Accra"
-              src={MAP_SRC}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
+            <div className="contact-map" data-reveal="mask">
+              <iframe
+                title="Map: Movenpick Ambassador Hotel, Independence Avenue, Accra"
+                src={MAP_SRC}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -535,10 +541,17 @@ export function Footer() {
             <Link href="/" aria-label="Syndicate Investment Advisory home">
               <LogoFull />
             </Link>
+            <p className="footer-blurb">
+              Investment advisory for Africa&apos;s real economy, across private credit, real assets and private
+              equity. From first conversation to financial close.
+            </p>
+            <p className="footer-address">
+              9th Floor, Business Emporium, Movenpick Ambassador Hotel, Independence Avenue, Accra
+            </p>
           </div>
           <div className="footer-cols">
             <div>
-              <h5>Platforms</h5>
+              <h2>Platforms</h2>
               {PLATFORMS.map((p) => (
                 <Link key={p.num} href="/platforms">
                   {p.name.join(" ")}
@@ -546,7 +559,7 @@ export function Footer() {
               ))}
             </div>
             <div>
-              <h5>Firm</h5>
+              <h2>Firm</h2>
               {NAV.map((n) => (
                 <Link key={n.href} href={n.href}>
                   {n.label}
@@ -554,7 +567,7 @@ export function Footer() {
               ))}
             </div>
             <div>
-              <h5>Connect</h5>
+              <h2>Connect</h2>
               <Link href="/contact">Contact us</Link>
               <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
               <a href={PHONE.href}>{PHONE.label}</a>
