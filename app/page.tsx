@@ -1,5 +1,13 @@
-import SyndicateAdvisory from "./SyndicateAdvisory";
+import { AboutTeaser, CtaBand, HomeHero, Pipeline, PlatformsPreview } from "./_site/sections";
 
 export default function HomePage() {
-  return <SyndicateAdvisory initialPage="home" />;
+  return (
+    <>
+      <HomeHero />
+      <Pipeline more />
+      <PlatformsPreview />
+      <AboutTeaser />
+      <CtaBand />
+    </>
+  );
 }
